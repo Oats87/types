@@ -365,6 +365,10 @@ type IngressConfig struct {
 	NodeSelector map[string]string `yaml:"node_selector" json:"nodeSelector,omitempty"`
 	// Ingress controller extra arguments
 	ExtraArgs map[string]string `yaml:"extra_args" json:"extraArgs,omitempty"`
+	// DNS Policy
+	DNSPolicy map[string]v1.DNSPolicy `yaml:"dns_policy" json:"dnsPolicy,omitempty"`
+	// DNS Configuration
+	DNSConf map[string]v1.PodDNSConfig `yaml:"dns_config" json:"dnsConfig,omitempty"`
 }
 
 type RKEPlan struct {
